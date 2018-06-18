@@ -18,7 +18,6 @@
 	},
 	"homepage": "https://github.com/BukovskyiDima/react-redux-test-client#readme",
 	"devDependencies": {
-		"autoprefixer-loader": "^3.2.0",
 		"babel-core": "^6.26.3",
 		"babel-loader": "^7.1.4",
 		"babel-preset-es2015": "^6.24.1",
@@ -41,6 +40,7 @@
 		]
 	},
 	"dependencies": {
+		"autoprefixer": "^8.6.3",
 		"classnames": "^2.2.6",
 		"immutable": "^3.8.2",
 		"react": "^16.4.1",
@@ -50,6 +50,8 @@
 		"react-redux": "^5.0.7",
 		"react-router": "^4.3.1",
 		"redux": "^4.0.0",
-		"socket.io-client": "^2.1.1"
+		"socket.io-client": "^2.1.1",
+		"uuid": "^3.2.1",
+		"object-assign": "^4.1.1"
 	}
 }

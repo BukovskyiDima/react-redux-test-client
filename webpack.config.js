@@ -1,6 +1,4 @@
 let webpack = require('webpack');
-let autoprefixer = require('autoprefixer');
-
 
 module.exports = {
 	entry: [
@@ -17,7 +15,21 @@ module.exports = {
 			}
 		}, {
 			test: /\.css$/,
-			loader: 'css-loader!autoprefixer-loader?browsers=last 2 versions'
+			use: [
+				{
+					loader: "style-loader"
+				},
+				{
+					loader: "css-loader",
+					options: {
+						modules: true,
+						importLoaders: 1,
+						localIdentName: "[name]_[local]_[hash:base64]",
+						sourceMap: true,
+						minimize: true
+					}
+				}
+			]
 		}]
 	},
 	resolve: {
@@ -34,5 +46,6 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin()
-	]
+	],
+	mode: 'development'
 };
